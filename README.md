@@ -172,4 +172,31 @@ For additional dataset sources, refer to the README files inside:
 
 ---
 
-## RESULT
+## Alignment Results
+
+The figure below shows the aligned training/testing results for the PyTorch and Jittor reproductions:
+
+![Alignment train and test results](asset/result.png)
+
+### Quantitative Comparison (Aligned Setting)
+
+| Method            | SOTS (PSNR/SSIM) | Rain100L (PSNR/SSIM) | CBSD68 σ=15 (PSNR/SSIM) | CBSD68 σ=25 (PSNR/SSIM) | CBSD68 σ=50 (PSNR/SSIM) |
+| ----------------- | ---------------: | -------------------: | -----------------------: | -----------------------: | -----------------------: |
+| MoCE-IR (PyTorch) |    29.68 / 0.967 |        35.42 / 0.946 |            33.31 / 0.921 |            30.65 / 0.868 |            27.29 / 0.758 |
+| MoCE-IR (Jittor)  |    29.68 / 0.967 |        35.42 / 0.946 |            33.31 / 0.921 |            30.65 / 0.868 |            27.29 / 0.758 |
+
+### Training Curve Alignment
+
+**Balance Loss (PyTorch vs Jittor)**
+
+![Balance Loss Comparison](asset/Balance_Loss.png)
+
+**Train Loss (PyTorch vs Jittor)**
+
+![Train Loss Comparison](asset/Train_Loss.png)
+
+### Conclusion
+
+- The two implementations show highly consistent optimization behavior over training epochs.
+- Both `balance loss` and `train loss` curves follow the same trend and converge to close values.
+- Combined with the matched PSNR/SSIM results, this indicates that the Jittor reproduction is well aligned with the PyTorch baseline.
