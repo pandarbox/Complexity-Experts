@@ -234,34 +234,6 @@ python src/test.py \
     --data_file_dir /root/autodl-tmp/MoCE-IR-jittor/datasets
 ```
 
-You can try restoring degraded images using the trained model with the following command.
-
-```
-python src/restoration.py \
-  --workdir /root/autodl-tmp/MoCE-IR \
-  --ckpt_id "" \
-  --img " " \
-  --model MoCE_IR_S
-```
-
-Below is ous results.
-
-|  | Dehazing | Deraining | denoising (DSB68) |  |  |
-|---|---:|---:|---:|---:|---:|
-|  | SOTS | Rain100L | σ=15 | σ=25 | σ=50 |
-| PSNR(ours) ↑ | 29.68 | 35.42 | 33.31 | 30.65 | 27.29 |
-| SSIM(ours) ↑ | 0.967 | 0.946 | 0.921 | 0.868 | 0.758 |
-| PSNR ↑ | 30.94 | 38.22 | 34.08 | 31.42 | 28.16 |
-| SSIM ↑ | 0.979 | 0.983 | 0.933 | 0.888 | 0.789 |
-
-
-Balance_loss:
-
-![alt text](assets/image.png)
-
-Train_loss:
-
-![alt text](assets/image-1.png)
 
 ## Citation
 
