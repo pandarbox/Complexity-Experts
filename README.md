@@ -178,13 +178,6 @@ The figure below shows the aligned training/testing results for the PyTorch and 
 
 ![Alignment train and test results](asset/result.png)
 
-### Quantitative Comparison (Aligned Setting)
-
-| Method            | SOTS (PSNR/SSIM) | Rain100L (PSNR/SSIM) | CBSD68 σ=15 (PSNR/SSIM) | CBSD68 σ=25 (PSNR/SSIM) | CBSD68 σ=50 (PSNR/SSIM) |
-| ----------------- | ---------------: | -------------------: | -----------------------: | -----------------------: | -----------------------: |
-| MoCE-IR (PyTorch) |    29.68 / 0.967 |        35.42 / 0.946 |            33.31 / 0.921 |            30.65 / 0.868 |            27.29 / 0.758 |
-| MoCE-IR (Jittor)  |    29.68 / 0.967 |        35.42 / 0.946 |            33.31 / 0.921 |            30.65 / 0.868 |            27.29 / 0.758 |
-
 ### Training Curve Alignment
 
 **Balance Loss (PyTorch vs Jittor)**
