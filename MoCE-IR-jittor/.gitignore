@@ -13,7 +13,7 @@ datasets/**
 # in checkpoints, only keep last.ckpt
 checkpoints/**
 !checkpoints/**/
-!checkpoints/**/last.ckpt
+
 !checkpoints/**/.gitkeep
 
 
