@@ -1,10 +1,25 @@
-logs
+# keep logs tracked
 wandb
 results
 train_ckpt
 visuals
 tests
-checkpoints/
+
+# keep directory tree of datasets, but ignore dataset files
+datasets/**
+!datasets/**/
+!datasets/**/.gitkeep
+
+# keep directory tree of tiny_datasets, but ignore data files
+tiny_datasets/**
+!tiny_datasets/**/
+!tiny_datasets/**/.gitkeep
+
+# in checkpoints, only keep last.ckpt
+checkpoints/**
+!checkpoints/**/
+!checkpoints/**/last.ckpt
+!checkpoints/**/.gitkeep
 
 
 *.DS_Store
@@ -129,15 +144,12 @@ venv.bak/
 .mypy_cache/
 
 
-/datasets
 
-/tiny_datasets
-
-/checkpoints
 
 *.pth
 *.pt
 *.ckpt
+!**/last.ckpt
 
 *.tar
 

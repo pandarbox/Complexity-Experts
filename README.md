@@ -15,10 +15,12 @@ Both projects target all-in-one image restoration tasks, including:
 
 ## Repository Layout
 
+```text
 .
-├── MoCE-IR/                 # PyTorch version
-├── MoCE-IR-jittor/          # Jittor version
+├── MoCE-IR/         # PyTorch version
+├── MoCE-IR-jittor/  # Jittor version
 └── README.md
+```
 
 Each subproject includes:
 
