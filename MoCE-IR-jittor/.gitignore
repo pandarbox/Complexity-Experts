@@ -10,7 +10,7 @@ datasets/**
 !datasets/**/
 !datasets/**/.gitkeep
 
-# in checkpoints, only keep last.ckpt
+# keep directory tree of checkpoints, but ignore checkpoint files
 checkpoints/**
 !checkpoints/**/
 
@@ -144,7 +144,6 @@ venv.bak/
 *.pth
 *.pt
 *.ckpt
-!**/last.ckpt
 
 *.tar
 
